@@ -1,0 +1,18 @@
+server:
+  port: 80
+    # 指定项目名
+    #servlet:
+  #context-path: /test
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/case?useSSL=true&charset=utf8mb4&serverTimezone=Hongkong
+    username: root
+    password: 123321
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+auth:
+  login:
+    pattern: '/?([-\w]+)?/test/(\w)+'
+    loginUrl: http://127.0.0.1/mock/login
+    host: http://127.0.0.1
